@@ -7,7 +7,7 @@ ctxSquare = canvasSquare.getContext '2d'
 canvasSquareTmp = document.getElementById 'square-temp'
 ctxSquareTmp = canvasSquareTmp.getContext '2d'
 
-L = 10
+L = 4
 
 stash = []
 
