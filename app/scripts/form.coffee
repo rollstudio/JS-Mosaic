@@ -13,24 +13,18 @@ setModalSizes = ->
     if width > maxWidth
         ratio = maxWidth / width
 
-        $modal.css {
-            width: Math.floor(maxWidth),
-            height: Math.floor(height * ratio)
-        }
-
         height = height * ratio
         width = width * ratio
 
     if height > maxHeight
         ratio = maxHeight / height
 
-        $modal.css {
-            width: Math.floor(width * ratio),
-            height: Math.floor(maxHeight)
-        }
-
         width = width * ratio
 
+    $modal.css {
+        width: width,
+        height: height
+    }
 
     $modal.css 'marginLeft', -width / 2
 

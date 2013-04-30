@@ -137,6 +137,8 @@ loadImages = (images, callback) ->
         loadImage url, _done
 
 doMosaic = (request) ->
+    ctxSquare.clearRect 0 , 0, canvasSquare.width, canvasSquare.height
+
     if stash.length == 0
 
         return window.setTimeout doMosaic, 200
