@@ -1,0 +1,162 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Mosaic Generator</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="styles/main.css">
+        <!-- build:js scripts/vendor/modernizr.js -->
+        <script src="components/modernizr/modernizr.js"></script>
+        <!-- endbuild -->
+    </head>
+    <body>
+        <div id="container">
+            <header>
+                <h1>Mosaic <span>Generator</span></h1>
+                <p>Create a mosaic of your photo using photos from instagram</p>
+            </header>
+
+            <p class="intro">Mosaic generator is a project created by some talented people. It allows to create beautiful and stunning mosaic with hundreds of smaller photos taken from Instagram. It doesn't matter what you choose to create, the result will be so cool and the app is extremely easy to use.</p>
+
+            <div id="steps">
+                <div class="step">1</div>
+
+                <div class="form">
+                    <div id="hashtag">
+                        <div class="wrapper">
+                            <input type="text" placeholder="Insert hashtag">
+
+                            <button>Next</button>                            
+                        </div>
+                    </div>
+
+                    <div id="drop">
+                        Drag an image here
+                    </div>
+                </div>
+
+                <div class="step">2</div>
+            </div>
+
+            <div id="restart">
+                <h1>Thank you! <a href="#">Restart?</a></h1>
+            </div>
+
+            <footer>
+                <nav id="tech">
+                    <ul>
+                        <li><a class="instagram" href="http://instagram.com/">Instagram</a></li>
+                        <li><a class="jquery" href="http://jquery.com/">jQuery</a></li>
+                        <li><a class="flask" href="http://flask.pocoo.org/">Flask</a></li>
+                    </ul>
+                </nav>
+
+                <nav id="info">
+                    <ul>
+                        <li><a href="#resources" data-toggle="modal" data-target="#resources">About the Project // Resources</a></li>
+                        <li><a href="mailto:hello@rollstudio.it">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <p>Source code is available <a href="https://github.com/rollstudio/JS-Mosaic">here</a></p>
+            </footer>
+    
+        </div>
+
+        <div id="response" class="modal hide fade" tabindex="-1">
+            <div class="modal-body">
+                <canvas id="source"></canvas>
+                <div id="spinner"></div>
+                <canvas id="square"></canvas>
+
+                <button disabled>Generating...</button>
+            </div>            
+        </div>
+
+        <canvas id="square-temp" width="100" height="100"></canvas>
+
+
+        <div id="resources" class="modal hide fade" tabindex="-1">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 id="myModalLabel">About the Project // Resources</h3>
+            </div>
+
+            <div class="modal-body">
+                <p>
+                    This project was realized in order to take part in the
+                    <a href="https://developer.mozilla.org/en/demos/devderby">Mozilla Dev Derby</a> a monthly web development contest open to anyone willing to learn.
+                </p>
+
+                <p>For the April Dev Derby, web workers was chosen as topic to tackle.</p>
+
+                <p>The resorces mainly used were the following:</p>
+
+                <dl>
+                    <dt>Web workers</dt>
+                    <dd>Web workers let you run scripts in the background, making even the most computationally-intensive applications possible.</dd>
+
+                    <dt>Canvas</dt>
+                    <dd>Canvas was used in order to do the image analysis</dd>
+
+                    <dt>Coffescript</dt>
+                    <dd>CoffeeScript is a little language that compiles into JavaScript.</dd>
+
+                    <dt>Grunt</dt>
+                    <dd>A task-based command line tool written in JavaScript.</dd>
+
+                    <dt>Instagram</dt>
+                    <dd>Instagram was used as source for the images</dd>
+
+                    <dt>Flask</dt>
+                    <dd>Flask was used as a proxy to get images from Instagram</dd>
+                </dl>
+
+                <button data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+
+        <!-- build:js scripts/jquery.js -->
+        <script src="components/jquery/jquery.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js scripts/file.js -->
+        <script src="scripts/plugins/spin.js"></script>
+        <script src="scripts/plugins/FileSaver.js"></script>
+        <script src="scripts/plugins/canvas-toBlob.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js(.tmp) scripts/utils.js -->
+        <script src="scripts/utils.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js(.tmp) scripts/coffee.js -->
+        <script src="scripts/form.js"></script>
+        <script src="scripts/hello.js"></script>
+        <!-- endbuild -->
+
+
+        <!-- build:js scripts/plugins.js -->
+        <script src="components/sass-bootstrap/js/bootstrap-affix.js"></script>
+        <script src="components/sass-bootstrap/js/bootstrap-alert.js"></script>
+        <script src="components/sass-bootstrap/js/bootstrap-dropdown.js"></script>
+        <script src="components/sass-bootstrap/js/bootstrap-tooltip.js"></script>
+        <script src="components/sass-bootstrap/js/bootstrap-modal.js"></script>
+        <script src="components/sass-bootstrap/js/bootstrap-transition.js"></script>
+        <script src="components/sass-bootstrap/js/bootstrap-button.js"></script>
+        <script src="components/sass-bootstrap/js/bootstrap-popover.js"></script>
+        <script src="components/sass-bootstrap/js/bootstrap-typeahead.js"></script>
+        <script src="components/sass-bootstrap/js/bootstrap-carousel.js"></script>
+        <script src="components/sass-bootstrap/js/bootstrap-scrollspy.js"></script>
+        <script src="components/sass-bootstrap/js/bootstrap-collapse.js"></script>
+        <script src="components/sass-bootstrap/js/bootstrap-tab.js"></script>
+        <!-- endbuild -->
+</body>
+</html>
