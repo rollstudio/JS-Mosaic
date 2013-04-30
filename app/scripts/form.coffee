@@ -20,6 +20,7 @@ setModalSizes = ->
         ratio = maxHeight / height
 
         width = width * ratio
+        height = maxHeight
 
     $modal.css {
         width: width,
